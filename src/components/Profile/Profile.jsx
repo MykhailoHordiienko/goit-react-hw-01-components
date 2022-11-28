@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   ProfileBox,
   DescriptionBox,
@@ -24,18 +26,28 @@ export const Profile = ({
 
       <UserStats>
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
+          <span>Followers</span>
+          <span>{followers}</span>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">{views}</span>
+          <span>Views</span>
+          <span>{views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
+          <span>Likes</span>
+          <span>{likes}</span>
         </li>
       </UserStats>
     </ProfileBox>
   );
+};
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
 };
