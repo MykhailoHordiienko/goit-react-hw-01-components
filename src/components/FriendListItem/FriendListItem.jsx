@@ -1,15 +1,12 @@
 import PropTypes from 'prop-types';
 
-import {
-  FriendStatusOff,
-  FriendStatusOn,
-  FriendItem,
-} from './FriendListItem.styled.js';
+import { FriendStatus, FriendItem } from './FriendListItem.styled.js';
+import { getBgColorStatus } from '../helpers/getBgColorStatus.js';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendItem>
-      {isOnline ? <FriendStatusOn /> : <FriendStatusOff />}
+      <FriendStatus style={{ backgroundColor: getBgColorStatus(isOnline) }} />
       <img src={avatar} alt="User avatar" width="48" />
       <p>{name}</p>
     </FriendItem>

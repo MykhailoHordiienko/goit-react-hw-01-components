@@ -11,18 +11,9 @@ export const FriendItem = styled.li`
   border-radius: 5px;
 `;
 
-export const FriendStatusOff = styled.span`
+export const FriendStatus = styled.span`
   display: block;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: red;
-`;
-
-export const FriendStatusOn = styled.span`
-  display: block;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: green;
 `;
