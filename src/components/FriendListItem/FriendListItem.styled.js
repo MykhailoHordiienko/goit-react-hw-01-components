@@ -16,4 +16,5 @@ export const FriendStatus = styled.span`
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  background-color: ${props => (props.isOnline ? 'green' : 'red')};
 `;
